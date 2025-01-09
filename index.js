@@ -11,7 +11,12 @@ const HEROKU_APP_NAME = process.env.HEROKU_APP_NAME; // Set this to your Heroku 
 // Middleware to parse JSON requests
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Telegram Bot!');
+});
+
 // Route to handle Telegram webhook updates
+
 app.post(`/bot${BOT_TOKEN}`, async (req, res) => {
   try {
     // Pass the request to the handler for processing
