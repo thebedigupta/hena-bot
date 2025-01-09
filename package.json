@@ -1,0 +1,26 @@
+{
+  "name": "hena-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "keywords": [],
+  "description": "",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebedigupta/hena-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thebedigupta/hena-bot/issues"
+  },
+  "homepage": "https://github.com/thebedigupta/hena-bot#readme"
+}
