@@ -20,8 +20,9 @@ app.get('/', (req, res) => {
 app.post(`/bot${process.env.BOT_TOKEN}`, async (req, res) => {
   try {
     // Pass the request to the handler for processing
-    const response = await handler(req.body);
-    res.send(response || 'OK');
+    console.log('Incoming request:', req.body);
+    await handler(req.body); // Process the Telegram update
+    res.send('OK');
   } catch (error) {
     console.error('Error handling Telegram webhook:', error);
     res.status(500).send('Internal Server Error');
