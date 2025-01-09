@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 // Route to handle Telegram webhook updates
 
-app.post(`/bot${BOT_TOKEN}`, async (req, res) => {
+app.post(`/bot${process.env.BOT_TOKEN}`, async (req, res) => {
   try {
     // Pass the request to the handler for processing
     const response = await handler(req.body);
